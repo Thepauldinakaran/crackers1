@@ -356,7 +356,7 @@
           const currentDate = new Date().toLocaleDateString();
 
           // Order count (Placeholder: You'll need to implement your own logic for real order count)
-          const orderCount = 1; // Placeholder value; update this according to your order count logic
+          //const orderCount = 1; // Placeholder value; update this according to your order count logic
 
           // Add heading
           doc.setFontSize(16);
@@ -378,7 +378,7 @@
           doc.setFontSize(12);
           doc.setFont("helvetica", "bold");
           doc.text(`Date: ${currentDate}`, 190, 10, { align: "right" });
-          doc.text(`Order Count: ${orderCount}`, 190, 16, { align: "right" });
+          // doc.text(`Order Count: ${orderCount}`, 190, 16, { align: "right" });
 
           // Customer details
           const name = document.getElementById("name").value;
