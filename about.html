@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sivakasi Crackers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-100 bg-fixed bg-cover"
+    style="background-image: url('./image/wallpaper.jpeg')"
+  >
+    <!-- Top Bar with Running Diwali Sale Message -->
+    <div class="bg-red-600 text-white py-2 flex justify-center">
+      <marquee behavior="scroll" direction="left">
+        🎉 Diwali Sales Here! Get the Best Deals Now! 🎉
+      </marquee>
+    </div>
+
+    <!-- Logo and Contact Info Section -->
+    <div
+      class="py-5 px-6 shadow-md flex justify-between items-center bg-white bg-opacity-90"
+    >
+      <div class="flex items-center">
+        <!-- Replace with your logo -->
+        <img
+          src="./image/name logo.png"
+          alt="Logo"
+          class="w-[100px] h-[100px]"
+        />
+        <div class="ml-4 md:ml-10">
+          <p class="font-bold text-xl">Sivakasi Crackers</p>
+          <p class="text-gray-800 text-md">
+            13/374/14 Sivakasi Main Road, kutty japan, Sivakasi - 626189
+          </p>
+        </div>
+      </div>
+      <!-- Contact Info -->
+      <div class="hidden md:flex space-x-6">
+        <div class="flex items-center">
+          <img src="./image/phone.png" alt="Phone" class="w-6 h-6 mr-2" />
+          <p class="font-bold text-lg">+91-9876543210</p>
+        </div>
+        <div class="flex items-center">
+          <img src="./image/email_icon.png" alt="Email" class="w-6 h-6 mr-2" />
+          <p class="font-bold text-lg">sivakasicrackers@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-purple-900 text-white py-4 sticky top-0 z-50">
+      <div
+        class="container mx-auto flex justify-between items-center px-4 md:px-0"
+      >
+        <!-- Sivakasi Crackers Brand Name on Left -->
+        <div class="text-lg font-bold md:hidden">Sivakasi Crackers</div>
+
+        <!-- Full Navbar for desktop and tablet -->
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="home.html" class="hover:text-yellow-400 font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-yellow-400 font-bold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="product.html" class="hover:text-yellow-400 font-bold"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Safety Tips</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Contact</a>
+          </li>
+        </ul>
+        <button
+          class="hidden md:block bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
+        >
+          Download Pricelist
+        </button>
+
+        <!-- Hamburger Menu on Right for mobile view -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div
+        id="mobile-menu"
+        class="fixed right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500 translate-x-full md:hidden dark:bg-[#2a004a] dark:text-white"
+      >
+        <div class="flex justify-end p-4">
+          <button id="close-menu" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul class="flex flex-col items-center space-y-4 mt-4">
+          <li>
+            <a href="home.html" class="hover:text-yellow-400 font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-yellow-400 font-bold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="product.html" class="hover:text-yellow-400 font-bold"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Safety Tips</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Contact</a>
+          </li>
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
+          >
+            Download Pricelist
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Diwali Sale Image -->
+    <div class="relative">
+      <img
+        src="./image/aboutcover.webp"
+        alt="Diwali Sale"
+        class="w-full h-[160px] md:h-[560px] object-fill"
+      />
+      <!-- Order Now Button -->
+      <a
+        href="product.html"
+        class="animate-pulse fixed bottom-4 right-4 z-[1100]"
+      >
+        <img src="./image/order now.png" alt="Order Now" class="w-32" />
+      </a>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/911234567890"
+      target="_blank"
+      class="fixed bottom-4 left-4 z-[1100]"
+    >
+      <img
+        src="./image/whatsapp-logo-png.png"
+        alt="WhatsApp"
+        class="h-12 w-12"
+      />
+    </a>
+    <!----------------------------------------------------------->
+    <div class="py-10 bg-gray-300">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-[#fde411]">
+          Welcome to Sivakasi Crackers
+        </h1>
+      </div>
+      <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 py-10">
+        <!-- Left Side: Image (Animated) -->
+        <div class="w-full lg:w-1/2 animate-slide-left">
+          <img
+            src="./image/aboutsale.jpg"
+            alt="Big Sale"
+            class="rounded-lg shadow-lg w-full h-auto object-cover"
+          />
+        </div>
+
+        <!-- Right Side: Static Text -->
+        <div class="w-full lg:w-1/2">
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-red-500 mb-2">
+              Sivakasi Crackers
+            </h2>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Best Crackers for Online Shopping
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              It’s our pride to introduce ourselves as an online store to sell
+              crackers. This is an outcome of the experience and knowledge we
+              share in the field of selling crackers. We are a wholesale trader
+              of multi-brand fire crackers in Sivakasi. We have been in the
+              field of selling crackers since 2010 and have our own exclusive
+              showroom.
+            </p>
+            <p class="mt-4 text-gray-600 leading-relaxed">
+              You don't need to stand in long queues to buy. Instead, you can
+              shop from home with just a click of a button. Selection gets
+              simpler, and we request you to include us as a part of your grand
+              celebration!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------------------->
+    <div class="bg-yellow-100 text-red-600 font-bold">
+      <div class="w-full h-1 bg-red-600"></div>
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center py-8 px-4"
+      >
+        <!-- Left Section (Logo and Description) -->
+        <div class="w-full md:w-1/2 flex flex-col items-center mb-6 md:mb-0">
+          <div class="">
+            <div class="flex justify-center">
+              <img
+                src="./image/name logo.png"
+                alt="fireworks"
+                class="h-[200px] md:h-[300px] w-[200px] md:w-[300px]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section (Quick Links and Contact Us) -->
+        <div class="w-full md:w-1/2 flex flex-col md:flex-row justify-between">
+          <!-- Contact Us -->
+          <div class="flex flex-col text-lg items-center md:items-start">
+            <h2 class="text-2xl font-bold text-red-700">Contact Us</h2>
+            <p class="text-center md:text-left mb-2">
+              place: 13/37/ Sivakasi to Sattur Main Road, kuttyjapan, Sivakasi -
+              626 189
+            </p>
+            <p class="text-center md:text-left mb-2">Phone: (+91) 9876543210</p>
+            <p class="text-center md:text-left mb-2">Phone: (+91) 1023456789</p>
+            <p class="text-center md:text-left mb-2">Phone: (+91) 8765432190</p>
+            <p class="text-center md:text-left mb-2">
+              email: sivakasicrackers@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Information -->
+      <div
+        class="bg-yellow-200 text-center py-6 text-sm text-gray-700 px-4 md:px-10"
+      >
+        <p class="px-4 md:px-10">
+          As per 2018 supreme court order, online sale of firecrackers are not
+          permitted! We value our customers and at the same time, respect
+          jurisdiction. We request you to add your products to the cart and
+          submit the required crackers through the enquiry button...
+        </p>
+        <p>© 2024 Sivakasi Crackers. All rights reserved.</p>
+      </div>
+    </div>
+    <!------------------------------script--------------------------->
+    <script src="script.js"></script>
+  </body>
+</html>

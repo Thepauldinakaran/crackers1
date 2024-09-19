@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sivakasi Crackers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #mobile-menu {
+        transition: transform 0.3s ease;
+      }
+
+      #mobile-menu.open {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 bg-fixed bg-cover"
+    style="background-image: url('./image/wallpaper.jpeg')"
+  >
+    <!-- Top Bar with Running Diwali Sale Message -->
+    <div class="bg-red-600 text-white py-2 flex justify-center">
+      <marquee behavior="scroll" direction="left">
+        🎉 Diwali Sales Here! Get the Best Deals Now! 🎉
+      </marquee>
+    </div>
+
+    <!-- Logo and Contact Info Section -->
+    <div
+      class="py-5 px-6 shadow-md flex justify-between items-center bg-white bg-opacity-90"
+    >
+      <div class="flex items-center">
+        <!-- Replace with your logo -->
+        <img
+          src="./image/name logo.png"
+          alt="Logo"
+          class="w-[100px] h-[100px]"
+        />
+        <div class="ml-4 md:ml-10">
+          <p class="font-bold text-xl">Sivakasi Crackers</p>
+          <p class="text-gray-800 text-md">
+            13/374/14 Sivakasi Main Road, kutty japan, Sivakasi - 626189
+          </p>
+        </div>
+      </div>
+      <!-- Contact Info -->
+      <div class="hidden md:flex space-x-6">
+        <div class="flex items-center">
+          <img src="./image/phone.png" alt="Phone" class="w-6 h-6 mr-2" />
+          <p class="font-bold text-lg">+91-9876543210</p>
+        </div>
+        <div class="flex items-center">
+          <img src="./image/email_icon.png" alt="Email" class="w-6 h-6 mr-2" />
+          <p class="font-bold text-lg">sivakasicrackers@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-purple-900 text-white py-4 sticky top-0 z-50">
+      <div
+        class="container mx-auto flex justify-between items-center px-4 md:px-0"
+      >
+        <!-- Sivakasi Crackers Brand Name on Left -->
+        <div class="text-lg font-bold md:hidden">Sivakasi Crackers</div>
+
+        <!-- Full Navbar for desktop and tablet -->
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="home.html" class="hover:text-yellow-400 font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-yellow-400 font-bold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="product.html" class="hover:text-yellow-400 font-bold"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Safety Tips</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Contact</a>
+          </li>
+        </ul>
+        <button
+          class="hidden md:block bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
+        >
+          Download Pricelist
+        </button>
+
+        <!-- Hamburger Menu on Right for mobile view -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div
+        id="mobile-menu"
+        class="fixed right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500 translate-x-full md:hidden dark:bg-[#2a004a] dark:text-white"
+      >
+        <div class="flex justify-end p-4">
+          <button id="close-menu" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul class="flex flex-col items-center space-y-4 mt-4">
+          <li>
+            <a href="home.html" class="hover:text-yellow-400 font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-yellow-400 font-bold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="product.html" class="hover:text-yellow-400 font-bold"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Safety Tips</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Contact</a>
+          </li>
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
+          >
+            Download Pricelist
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- JS for Menu -->
+
+    <!-- Hero Section with Diwali Sale Image -->
+    <div class="relative">
+      <img
+        src="./image/homepost.webp"
+        alt="Diwali Sale"
+        class="w-full h-[160px] md:h-[560px] object-cover"
+      />
+      <!-- Order Now Button -->
+      <a
+        href="product.html"
+        class="animate-pulse fixed bottom-4 right-4 z-[1100]"
+      >
+        <img src="./image/order now.png" alt="Order Now" class="w-32" />
+      </a>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/911234567890"
+      target="_blank"
+      class="fixed bottom-4 left-4 z-[1100]"
+    >
+      <img
+        src="./image/whatsapp-logo-png.png"
+        alt="WhatsApp"
+        class="h-12 w-12"
+      />
+    </a>
+
+    <!-- Main Content Section -->
+    <div class="px-4 md:px-16 py-16 bg-white bg-opacity-90">
+      <!-- Header Section -->
+      <div class="w-full max-w-4xl mx-auto px-2">
+        <!-- Box with top, left, and right borders -->
+        <div
+          class="relative border-t-4 border-l-4 border-r-4 md:border-t-8 md:border-l-8 md:border-r-8 border-red-600 w-full h-auto p-4 md:p-8"
+        >
+          <h1
+            class="text-center mt-4 mb-4 text-red-600 text-3xl md:text-6xl font-bold"
+          >
+            Sivakasi Crackers
+          </h1>
+          <p
+            class="absolute bottom-[-5px] text-xs text-center md:text-lg left-1/2 transform -translate-x-1/2 text-gray-700 px-2"
+          >
+            Online Crackers Shopping
+          </p>
+
+          <div>
+            <!-- Red borders on left and right -->
+            <div
+              class="absolute left-0 bottom-0 border-b-4 md:border-b-8 border-red-600 md:w-[35%] w-[25%] h-0"
+            ></div>
+            <div
+              class="absolute right-0 bottom-0 border-b-4 md:border-b-8 border-red-600 md:w-[35%] w-[25%] h-0"
+            ></div>
+          </div>
+        </div>
+
+        <!-- SHOP NOW Button -->
+        <div class="text-center mt-6">
+          <button
+            class="bg-blue-900 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700"
+          >
+            SHOP NOW
+          </button>
+        </div>
+      </div>
+
+      <!-- Description Section -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center ml-0 md:ml-16 mt-8"
+      >
+        <div class="text-left font-semi-bold text-lg p-4 md:p-8 text-justify">
+          <p class="mb-4">
+            Sivakasi Crackers shop for wholesale, retail and online sales in
+            Sivakasi has a strong base in supplying, crackers, fancy pyrotech
+            items and gift boxes for whole Tamilnadu throughout the year for all
+            festivals, functions and celebrations.
+          </p>
+          <p class="mb-4">
+            This is an outcome of the experience and knowledge we share in the
+            field of selling crackers. We are a wholesale trader of Multi brand
+            fire crackers. We have our own exclusive showroom in Sivakasi.
+          </p>
+          <p class="mb-4">
+            One can buy crackers from us round the year. Buying quality crackers
+            during all season we came up with the solution to buy crackers
+            online.
+          </p>
+        </div>
+
+        <!-- Image Section -->
+        <div
+          class="flex justify-center w-[90%] md:w-[430px] ml-0 md:ml-16 mb-8"
+        >
+          <img
+            src="./image/carcker png 1.png"
+            alt="Crackers"
+            class="md:w-full"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Legacy Section -->
+    <div class="py-5 bg-yellow-300">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold text-red-600">OUR LEGACY</h2>
+        <div class="h-1 w-12 bg-red-600 mx-auto mt-2"></div>
+      </div>
+
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 px-[2%] md:px-[9%] py-3 gap-6"
+      >
+        <!-- Card 1 -->
+        <div class="bg-white shadow-lg rounded-lg p-5 text-center">
+          <div class="text-black mb-4">
+            <img
+              src="/image/experience.png"
+              alt="Experience Icon"
+              class="w-[110px] mx-auto"
+            />
+          </div>
+          <h3 class="text-3xl font-bold">10+</h3>
+          <p class="text-black-500 font-bold text-xl">Experience</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white shadow-lg rounded-lg p-5 text-center">
+          <div class="text-black mb-4">
+            <img
+              src="./image/product.png"
+              alt="Products Icon"
+              class="w-[110px] mx-auto"
+            />
+          </div>
+          <h3 class="text-3xl font-bold">200+</h3>
+          <p class="text-black-500 font-bold text-xl">Products</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white shadow-lg rounded-lg p-5 text-center">
+          <div class="text-red-600 mb-4">
+            <img
+              src="./image/happy customer.png"
+              alt="Customers Icon"
+              class="w-[110px] mx-auto"
+            />
+          </div>
+          <h3 class="text-3xl font-bold">500+</h3>
+          <p class="text-black-500 font-bold text-xl">Customers</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white shadow-lg rounded-lg p-4 text-center">
+          <div class="text-red-600 mb-4">
+            <img
+              src="./image/coolemoji .png"
+              alt="Satisfaction Icon"
+              class="w-[90px] my-5 mx-[20%] md:mx-[30%]"
+            />
+          </div>
+          <h3 class="text-3xl font-bold">100%</h3>
+          <p class="text-black-500 font-bold text-xl">Satisfaction</p>
+        </div>
+      </div>
+    </div>
+    <!----------------Our Products------------------------------------------->
+    <div
+      class="z-index-0 w-full px-[6%] sm:px-[12%] py-10 scroll-mt-20 text-center bg-gray-400 bg-opacity-90"
+    >
+      <h2 class="text-6xl font-bold text-gray-800 relative inline-block">
+        Our Products
+      </h2>
+      <!--------------list of category------------------------->
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 my-10 sm:my-20"
+      >
+        <!-------------------first 1 product--------------------->
+        <div
+          class="aspect-square bg-[url('./image/singlesound.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <a href="product.html">
+              <div>
+                <h2 class="font-sembibold dark:text-gray-700">Single sound</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!------------2 product------------------>
+        <div
+          class="aspect-square bg-[url('./image/giant.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <a href="product.html">
+              <div class="w-1">
+                <h2 class="font-sembibold dark:text-gray-700">GaintCrackers</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!--------3 product------------------->
+        <div
+          class="aspect-square bg-[url('./image/shot.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <a href="product.html">
+              <div>
+                <h2 class="font-sembibold dark:text-gray-700">Shots</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!------------4th---------------->
+        <div
+          class="aspect-square bg-[url('./image/bombs.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <a href="product.html">
+              <div>
+                <h2 class="font-sembibold dark:text-gray-700">Bombs</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-------------5th---------------->
+        <div
+          class="aspect-square bg-[url('./image/adiyal.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <a href="product.html"
+              >>
+              <div>
+                <h2 class="font-sembibold dark:text-gray-700">Adiyal</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!----------------6th--------------------->
+        <div
+          class="aspect-square bg-[url('./image/twinkling.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Twinkling</h2>
+            </div>
+          </div>
+        </div>
+        <!------------------7th------------------->
+        <div
+          class="aspect-square bg-[url('./image/pencil.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Pencil</h2>
+            </div>
+          </div>
+        </div>
+        <!--------------------------8th------------->
+        <div
+          class="aspect-square bg-[url('./image/chakkara.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Chakkara</h2>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------9th---------------->
+        <div
+          class="aspect-square bg-[url('./image/flowerpot.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">FlowerPots</h2>
+            </div>
+          </div>
+        </div>
+        <!---------------------10th----------------->
+        <div
+          class="aspect-square bg-[url('./image/rocket.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Rocket</h2>
+            </div>
+          </div>
+        </div>
+        <!------------------11th----------->
+        <div
+          class="aspect-square bg-[url('./image/bijili.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Bijili</h2>
+            </div>
+          </div>
+        </div>
+        <!-----------------12th-->
+        <div
+          class="aspect-square bg-[url('./image/twinkling.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">
+                Aerial Sky Shots
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!------------------------13-->
+        <div
+          class="aspect-square bg-[url('./image/twinkling.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Peacock</h2>
+            </div>
+          </div>
+        </div>
+        <!------------14th-->
+        <div
+          class="aspect-square bg-[url('./image/kids.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">KidsSpecial</h2>
+            </div>
+          </div>
+        </div>
+        <!-------------15th-------->
+        <div
+          class="aspect-square bg-[url('./image/sparklers.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Sparkles</h2>
+            </div>
+          </div>
+        </div>
+        <!--------------------16th--------->
+        <div
+          class="aspect-square bg-[url('./image/fancy.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Fancy</h2>
+            </div>
+          </div>
+        </div>
+        <!----------------------17th------------>
+        <div
+          class="aspect-square bg-[url('./image/fountains.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Fountains</h2>
+            </div>
+          </div>
+        </div>
+        <!--------------------18th-->
+        <div
+          class="aspect-square bg-[url('./image/matchbox.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">ColorMatches</h2>
+            </div>
+          </div>
+        </div>
+        <!--------------------------19th-------->
+        <div
+          class="aspect-square bg-[url('./image/new-arraivals.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">NewArrival</h2>
+            </div>
+          </div>
+        </div>
+        <!--------------------20-->
+        <div
+          class="aspect-square bg-[url('./image/gift-set.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-sembibold dark:text-gray-700">Gift Box</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------------------------------->
+    <div class="bg-yellow-100 text-red-600 font-bold">
+      <div class="w-full h-1 bg-red-600"></div>
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center py-8 px-4"
+      >
+        <!-- Left Section (Logo and Description) -->
+        <div class="w-full md:w-1/2 flex flex-col items-center mb-6 md:mb-0">
+          <div class="">
+            <div class="flex justify-center">
+              <img
+                src="./image/name logo.png"
+                alt="fireworks"
+                class="h-[200px] md:h-[300px] w-[200px] md:w-[300px]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section (Quick Links and Contact Us) -->
+        <div class="w-full md:w-1/2 flex flex-col md:flex-row justify-between">
+          <!-- Contact Us -->
+          <div class="flex flex-col text-lg items-center md:items-start">
+            <h2 class="text-2xl font-bold text-red-700">Contact Us</h2>
+            <p class="text-center md:text-left mb-2">
+              place: 13/37/ Sivakasi to Sattur Main Road, kuttyjapan, Sivakasi -
+              626 189
+            </p>
+            <p class="text-center md:text-left mb-2">Phone: (+91) 9876543210</p>
+            <p class="text-center md:text-left mb-2">Phone: (+91) 1023456789</p>
+            <p class="text-center md:text-left mb-2">Phone: (+91) 8765432190</p>
+            <p class="text-center md:text-left mb-2">
+              email: sivakasicrackers@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Information -->
+      <div
+        class="bg-yellow-200 text-center py-6 text-sm text-gray-700 px-4 md:px-10"
+      >
+        <p class="px-4 md:px-10">
+          As per 2018 supreme court order, online sale of firecrackers are not
+          permitted! We value our customers and at the same time, respect
+          jurisdiction. We request you to add your products to the cart and
+          submit the required crackers through the enquiry button...
+        </p>
+        <p>© 2024 Sivakasi Crackers. All rights reserved.</p>
+      </div>
+    </div>
+
+    <!-----------------------------script-------------------------------->
+    <script src="script.js"></script>
+  </body>
+</html>

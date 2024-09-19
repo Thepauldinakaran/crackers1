@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Top Bar with Running Diwali Sale Message -->
+    <div class="bg-red-600 text-white py-2 flex justify-center">
+      <marquee behavior="scroll" direction="left">
+        🎉 Diwali Sales Here! Get the Best Deals Now! 🎉
+      </marquee>
+    </div>
+
+    <!-- Logo and Contact Info Section -->
+    <div
+      class="py-5 px-6 shadow-md flex justify-between items-center bg-white bg-opacity-90"
+    >
+      <div class="flex items-center">
+        <!-- Replace with your logo -->
+        <img
+          src="./image/name logo.png"
+          alt="Logo"
+          class="w-[100px] h-[100px]"
+        />
+        <div class="ml-4 md:ml-10">
+          <p class="font-bold text-xl">Sivakasi Crackers</p>
+          <p class="text-gray-800 text-md">
+            13/374/14 Sivakasi Main Road, kutty japan, Sivakasi - 626189
+          </p>
+        </div>
+      </div>
+      <!-- Contact Info -->
+      <div class="hidden md:flex space-x-6">
+        <div class="flex items-center">
+          <img src="./image/phone.png" alt="Phone" class="w-6 h-6 mr-2" />
+          <p class="font-bold text-lg">+91-9876543210</p>
+        </div>
+        <div class="flex items-center">
+          <img src="./image/email_icon.png" alt="Email" class="w-6 h-6 mr-2" />
+          <p class="font-bold text-lg">sivakasicrackers@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-purple-900 text-white py-4 sticky top-0 z-50">
+      <div
+        class="container mx-auto flex justify-between items-center px-4 md:px-0"
+      >
+        <!-- Sivakasi Crackers Brand Name on Left -->
+        <div class="text-lg font-bold md:hidden">Sivakasi Crackers</div>
+
+        <!-- Full Navbar for desktop and tablet -->
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="home.html" class="hover:text-yellow-400 font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-yellow-400 font-bold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="product.html" class="hover:text-yellow-400 font-bold"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Safety Tips</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Contact</a>
+          </li>
+        </ul>
+        <button
+          class="hidden md:block bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
+        >
+          Download Pricelist
+        </button>
+
+        <!-- Hamburger Menu on Right for mobile view -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div
+        id="mobile-menu"
+        class="fixed right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500 translate-x-full md:hidden dark:bg-[#2a004a] dark:text-white"
+      >
+        <div class="flex justify-end p-4">
+          <button id="close-menu" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul class="flex flex-col items-center space-y-4 mt-4">
+          <li>
+            <a href="home.html" class="hover:text-yellow-400 font-bold">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:text-yellow-400 font-bold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="product.html" class="hover:text-yellow-400 font-bold"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Safety Tips</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-yellow-400 font-bold">Contact</a>
+          </li>
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
+          >
+            Download Pricelist
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Diwali Sale Image -->
+    <div class="relative">
+      <img
+        src="./image/productpic.jpg"
+        alt="Diwali Sale"
+        class="w-full h-[160px] md:h-[560px] object-cover"
+      />
+      <a href="cart.html" class="fixed bottom-4 left-4 z-[1100]">
+        <img
+          src="./image/cartpic.png"
+          alt="Order Now"
+          class="w-[14%] sm:w-[10%]"
+        />
+      </a>
+    </div>
+    <!-- Top Section with Total Products, Items, and Amount -->
+    <div
+      class="flex sm:flex-row text-white font-bold bg-red-500 justify-between p-4 text-[10px] sm:text-xs md:text-sm bg-gray-100 shadow-lg mx-0 sticky"
+      style="top: 7%"
+      sm:style="top: 11%;"
+    >
+      <div>Total Products: <span id="total-products">0</span></div>
+      <div>Total Items: <span id="total-items">0</span></div>
+      <div>Total Amount: Rs. <span id="total-amount">0.00</span></div>
+    </div>
+
+    <!-- Product List Section -->
+    <div class="sm: overflow-x-auto">
+      <table
+        class="table-auto w-full bg-white shadow-md text-xs sm:text-sm md:text-base"
+      >
+        <thead class="bg-gray-300">
+          <tr>
+            <th class="p-1 sm:p-3 text-left">Image</th>
+            <th class="p-1 sm:p-3 text-left">Product</th>
+            <th class="p-1 sm:p-3 text-center">Price</th>
+            <th class="p-1 sm:p-3 text-center">Qty</th>
+            <th class="p-1 sm:p-3 text-center">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="product-list">
+          <!-- Products will be injected here -->
+        </tbody>
+      </table>
+
+      <!-- Checkout Button -->
+      <div class="mt-1 mr-2 text-right mb-2 mt-2">
+        <button
+          id="checkout"
+          class="bg-blue-500 text-white px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm md:text-base rounded shadow"
+        >
+          Checkout
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const products = [
+        {
+          category: "SINGLE SOUND CRACKERS", ///////////////1st category
+          items: [
+            {
+              name: "Kuruvi Vedi",
+              brand: "5pcs",
+              price: 35,
+              originalPrice: 55,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "4 Lakshmi",
+              brand: "5pcs",
+              price: 70,
+              originalPrice: 100,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "4 Lakshmi Deluxe",
+              brand: "5pcs",
+              price: 100,
+              originalPrice: 130,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "5 Lakshmi Deluxe",
+              brand: "5pcs",
+              price: 180,
+              originalPrice: 210,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "6 Lakshmi Deluxe",
+              brand: "5pcs",
+              price: 190,
+              originalPrice: 220,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "3 1/2 Lakshmi",
+              brand: "5pcs",
+              price: 50,
+              originalPrice: 75,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+          ],
+        },
+        {
+          category: "GAINT CRACKER", ///////////////2nd category
+          items: [
+            {
+              name: "28 Cholsa",
+              brand: "1 Pkt",
+              price: 75,
+              originalPrice: 120,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "24 Deluxe",
+              brand: "1 Pkt",
+              price: 165,
+              originalPrice: 220,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "50 Deluxe",
+              brand: "1 Pkt",
+              price: 440,
+              originalPrice: 660,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "100 Deluxe",
+              brand: "1 Pkt",
+              price: 880,
+              originalPrice: 1030,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+          ],
+        },
+        {
+          category: "SHOTS",
+          items: [
+            {
+              name: "7'Shots",
+              brand: "1 BOX",
+              price: 380,
+              originalPrice: 520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "Penta Shots",
+              brand: "1 BOX",
+              price: 760,
+              originalPrice: 970,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "12'Shots(Color)",
+              brand: "1 BOX",
+              price: 550,
+              originalPrice: 980,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "25'Shots(Color)",
+              brand: "1 BOX",
+              price: 990,
+              originalPrice: 1250,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "30'Shots(Color)",
+              brand: "1 BOX",
+              price: 1900,
+              originalPrice: 2520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "60'Shots(Color)",
+              brand: "1 BOX",
+              price: 3750,
+              originalPrice: 4340,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "120'Shots(Color)",
+              brand: "1 BOX",
+              price: 7200,
+              originalPrice: 8520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "240'Shots(Color)",
+              brand: "1 BOX",
+              price: 13500,
+              originalPrice: 14520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "30'Shots(Branded)",
+              brand: "1 BOX",
+              price: 2800,
+              originalPrice: 3520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "60'Shots(Branded)",
+              brand: "1 BOX",
+              price: 5400,
+              originalPrice: 6500,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "120'Shots(Branded)",
+              brand: "1 BOX",
+              price: 10750,
+              originalPrice: 11520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+          ],
+        },
+
+        {
+          category: "SHOT",
+          items: [
+            {
+              name: "7'Shots",
+              brand: "1 BOX",
+              price: 380,
+              originalPrice: 520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "Penta Shots",
+              brand: "1 BOX",
+              price: 760,
+              originalPrice: 970,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "12'Shots(Color)",
+              brand: "1 BOX",
+              price: 550,
+              originalPrice: 980,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "25'Shots(Color)",
+              brand: "1 BOX",
+              price: 990,
+              originalPrice: 1250,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "30'Shots(Color)",
+              brand: "1 BOX",
+              price: 1900,
+              originalPrice: 2520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "60'Shots(Color)",
+              brand: "1 BOX",
+              price: 3750,
+              originalPrice: 4340,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "120'Shots(Color)",
+              brand: "1 BOX",
+              price: 7200,
+              originalPrice: 8520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "240'Shots(Color)",
+              brand: "1 BOX",
+              price: 13500,
+              originalPrice: 14520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "30'Shots(Branded)",
+              brand: "1 BOX",
+              price: 2800,
+              originalPrice: 3520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "60'Shots(Branded)",
+              brand: "1 BOX",
+              price: 5400,
+              originalPrice: 6500,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+            {
+              name: "120'Shots(Branded)",
+              brand: "1 BOX",
+              price: 10750,
+              originalPrice: 11520,
+              image: "https://via.placeholder.com/50",
+              quantity: 0,
+            },
+          ],
+        },
+        /*...*/
+      ]; // Your existing products array
+
+      function saveCartQuantities() {
+        // Store only the quantities of products in localStorage
+        const quantities = {};
+        products.forEach((category) => {
+          category.items.forEach((product) => {
+            quantities[product.name] = product.quantity; // Store by product name
+          });
+        });
+        localStorage.setItem("productQuantities", JSON.stringify(quantities));
+      }
+
+      function loadCartQuantities() {
+        // Retrieve quantities from localStorage
+        const savedQuantities = localStorage.getItem("productQuantities");
+        if (savedQuantities) {
+          const quantities = JSON.parse(savedQuantities);
+
+          // Update the products array with the stored quantities
+          products.forEach((category) => {
+            category.items.forEach((product) => {
+              if (quantities[product.name] !== undefined) {
+                product.quantity = quantities[product.name]; // Apply saved quantity
+              }
+            });
+          });
+        }
+      }
+
+      function updateTotals() {
+        let totalProducts = 0;
+        let totalItems = 0;
+        let totalAmount = 0;
+
+        products.forEach((category) => {
+          category.items.forEach((product) => {
+            totalProducts += product.quantity > 0 ? 1 : 0;
+            totalItems += product.quantity;
+            totalAmount += product.quantity * product.price;
+          });
+        });
+
+        document.getElementById("total-products").innerText = totalProducts;
+        document.getElementById("total-items").innerText = totalItems;
+        document.getElementById("total-amount").innerText =
+          totalAmount.toLocaleString("en-IN");
+      }
+
+      function increaseQuantity(index, category) {
+        const cat = products.find((cat) => cat.category === category);
+        cat.items[index].quantity++;
+        saveCartQuantities(); // Save quantities whenever quantity changes
+        renderProducts();
+        updateTotals();
+      }
+
+      function decreaseQuantity(index, category) {
+        const cat = products.find((cat) => cat.category === category);
+        if (cat.items[index].quantity > 0) {
+          cat.items[index].quantity--;
+          saveCartQuantities(); // Save quantities whenever quantity changes
+          renderProducts();
+          updateTotals();
+        }
+      }
+
+      function renderProducts() {
+        const productList = document.getElementById("product-list");
+        productList.innerHTML = "";
+
+        products.forEach((category) => {
+          productList.innerHTML += `
+            <tr class="bg-gray-200 text-left">
+                <td colspan="5" class="p-1 sm:p-3 font-bold text-gray-700">${category.category}</td>
+            </tr>
+          `;
+
+          category.items.forEach((product, index) => {
+            productList.innerHTML += `
+              <tr class="border-b text-xs sm:text-sm md:text-base">
+                  <td class="p-1 sm:p-3 text-center">
+                      <img src="${product.image}" alt="${
+              product.name
+            }" class="w-10 h-10 sm:w-12 sm:h-12 object-cover">
+                  </td>
+                  <td class="p-1 sm:p-3 text-left">
+                      <p class="font-semibold">${product.name}</p>
+                      <p class=" text-[9px] text-gray-600 sm:text-sm">${
+                        product.brand
+                      }</p>
+                  </td>
+                  <td class="p-1 sm:p-3 text-center">
+                      <p>Rs. ${product.price.toLocaleString()}</p>
+                      <p class="line-through text-gray-500 text-[8px] sm:text-sm">Rs. ${product.originalPrice.toLocaleString()}</p>
+                  </td>
+                  <td class="p-1 sm:p-3 text-center">
+                      <div class="flex justify-center items-center">
+                          <button onclick="decreaseQuantity(${index}, '${
+              category.category
+            }')" class="bg-gray-300 text-gray-700 px-1 sm:px-2 rounded-l">-</button>
+                          <input type="text" value="${
+                            product.quantity
+                          }" class="w-8 sm:w-12 text-center border" readonly>
+                          <button onclick="increaseQuantity(${index}, '${
+              category.category
+            }')" class="bg-gray-300 text-gray-700 px-1 sm:px-2 rounded-r">+</button>
+                      </div>
+                  </td>
+                  <td class="p-1 sm:p-3 text-center">
+                      Rs. ${(product.price * product.quantity).toLocaleString()}
+                  </td>
+              </tr>
+            `;
+          });
+        });
+      }
+
+      // Load quantities and render products on page load
+      window.onload = function () {
+        loadCartQuantities(); // Load saved quantities from localStorage
+        renderProducts();
+        updateTotals();
+      };
+
+      document.getElementById("checkout").addEventListener("click", () => {
+        const cartItems = [];
+
+        products.forEach((category) => {
+          category.items.forEach((product) => {
+            if (product.quantity > 0) {
+              cartItems.push(product);
+            }
+          });
+        });
+
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        window.location.href = "cart.html";
+      });
+    </script>
+    <script src="script.js"></script>
+
+    <!-- Footer Information -->
+    <div
+      class="bg-yellow-200 text-center py-5 text-[10px] text-gray-700 px-4 md:px-10 sm:text-sm"
+    >
+      <p class="px-4 md:px-10">
+        As per 2018 supreme court order, online sale of firecrackers are not
+        permitted! We value our customers and at the same time, respect
+        jurisdiction. We request you to add your products to the cart and submit
+        the required crackers through the enquiry button...
+      </p>
+      <p>© 2024 Sivakasi Crackers. All rights reserved.</p>
+    </div>
+  </body>
+</html>
